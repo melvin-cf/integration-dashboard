@@ -1,0 +1,14 @@
+---
+integration-dashboard:
+  build: .
+  command: bundle exec ruby app.rb
+  ports:
+  - "4567:4567"
+  environment:
+    - RACK_ENV=production
+  links:
+  - postgres
+postgres:
+  image: convox/postgres
+  ports:
+    - "5432:5432"
