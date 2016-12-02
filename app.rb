@@ -1,11 +1,8 @@
 require 'sinatra'
-require 'sinatra/activerecord'
+#require 'sinatra/activerecord'
 require './environments'
 require 'json'
 require 'uuid'
-
-class Testplan < ActiveRecord::Base
-end
 
 get '/' do
   puts "Welcome"

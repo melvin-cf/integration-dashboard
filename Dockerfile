@@ -7,6 +7,7 @@ RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
 COPY . $APP_HOME
+RUN gem install bundler
 RUN bundle install --path vendor/bundle 
 
 ADD . $APP_HOME 

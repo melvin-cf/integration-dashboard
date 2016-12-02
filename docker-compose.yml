@@ -5,10 +5,10 @@ integration-dashboard:
   ports:
   - "4567:4567"
   environment:
-    - RACK_ENV=production
-  links:
-  - postgres
-postgres:
-  image: convox/postgres
-  ports:
-    - "5432:5432"
+    - RACK_ENV=development
+#  links:
+#  - postgres
+#postgres:
+#  image: convox/postgres
+#  ports:
+#    - "5432:5432"
