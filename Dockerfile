@@ -7,6 +7,6 @@ RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
 COPY . $APP_HOME
-RUN bundle install
+RUN bundle install --path vendor/bundle 
 
 ADD . $APP_HOME 
