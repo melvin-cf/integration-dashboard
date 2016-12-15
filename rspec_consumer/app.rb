@@ -5,7 +5,7 @@ require 'json'
 require 'uuid'
 
 get '/' do
-  puts "Welcome"
+  "Welcome"
 end
 
 post('/rspec') do

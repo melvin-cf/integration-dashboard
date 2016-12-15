@@ -11,3 +11,9 @@ RUN gem install bundler
 RUN bundle install --path vendor/bundle 
 
 ADD . $APP_HOME 
+
+EXPOSE 4567
+
+ENTRYPOINT ["bundle", "exec"]
+
+CMD ["ruby", "app.rb"]

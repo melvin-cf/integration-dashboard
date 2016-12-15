@@ -1,14 +1,9 @@
----
-integration-dashboard:
-  build: .
-  command: bundle exec ruby app.rb
-  ports:
-  - "4567:4567"
-  environment:
+version: '2'
+services:
+  web:
+    build: ./rspec_consumer
+    environment:
     - RACK_ENV=development
-#  links:
-#  - postgres
-#postgres:
-#  image: convox/postgres
-#  ports:
-#    - "5432:5432"
+    ports:
+    - "4567:4567"
+    command:  bundle exec ruby app.rb
